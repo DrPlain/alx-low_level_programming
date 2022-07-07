@@ -14,6 +14,7 @@ int add(int, int);
 void print_to_98(int n);
 void sumMultiples(void);
 int _isupper(int c);
+int _isdigit(int c);
 
 #endif
 
