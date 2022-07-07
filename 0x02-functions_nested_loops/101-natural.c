@@ -23,5 +23,5 @@ void sumMultiples(void)
 	}
 	sumTotal = sum1 + sum2;
 
-	printf("Sum of the multiples of 3 or 5 below 1024 is %d\n", sumTotal);
+	printf(" %d\n", sumTotal);
 }
