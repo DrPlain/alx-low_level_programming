@@ -16,7 +16,7 @@ void print_rev(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		len++;
 
-	for (i = len; i >= 0; i--)
+	for (i = len; i >= 0; --i)
 	{
 		_putchar(str[i]);
 	}
