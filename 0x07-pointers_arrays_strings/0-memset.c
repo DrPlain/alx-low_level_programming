@@ -7,7 +7,7 @@
  *
  * @b: constant byte to be filled
  *
- * n: The first n bytes to be filled
+ * @n: The first n bytes to be filled
  *
  * Return: Pointer to s
  */
