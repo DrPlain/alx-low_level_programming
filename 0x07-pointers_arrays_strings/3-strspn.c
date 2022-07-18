@@ -6,6 +6,8 @@
  * @s: String to be scanned
  *
  * @accept: prefix substring
+ *
+ * Return: uniaue number of time prefix substring appears
  */
 
 unsigned int _strspn(char *s, char *accept)
