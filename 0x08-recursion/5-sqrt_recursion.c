@@ -2,14 +2,14 @@
 int natural_sqrt(int start, int n);
 
 /**
- * sqrt_recursion - Evaluates for natural sqrt of n
+ * _sqrt_recursion - Evaluates for natural sqrt of n
  *
  * @n: Input integer
  *
  * Return: sqrt of n or -1 if n does not have a natural sqrt
  */
 
-int sqrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
