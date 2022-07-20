@@ -13,11 +13,11 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return(natural_sqrt(1, n));
+	return (natural_sqrt(1, n));
 }
 
 /**
- * sqrt - Evaluates for natural sqrt of n
+ * natural_sqrt - Evaluates for natural sqrt of n
  *
  * @n: Input integer
  *
@@ -32,5 +32,5 @@ int natural_sqrt(int start, int n)
 		return (-1);
 	if (start * start == n)
 		return (start);
-	return(natural_sqrt(start + 1, n));
+	return (natural_sqrt(start + 1, n));
 }
