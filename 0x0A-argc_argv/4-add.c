@@ -14,22 +14,22 @@
 
 int main(int argc, char *argv[])
 {
-	int num;
 	int i;
+	int num;
 	int result = 0;
 
-	for (i = 1; i < argc; i++)
+	while (argc-- > 1)
 	{
-		if (!(isdigit(*argv[i])))
+		for (i = 0; argv[argc][i]; i++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!(isdigit(argv[argc][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			num = atoi(argv[i]);
-			result = result + num;
-		}
+		num = atoi(argv[argc]);
+		result = result + num;
 	}
 	printf("%d\n", result);
 	return (0);
