@@ -25,11 +25,16 @@ char *_strdup(char *str)
 	if (pstr == NULL)
 		return (NULL);
 
-	while (i < size)
+	if (str != NULL)
 	{
-		pstr[i] = str[i];
-		i++;
+		while (i < size)
+		{
+			pstr[i] = str[i];
+			i++;
+		}
+		pstr[i] = '\0';
+		return (pstr);
 	}
-	pstr[i] = '\0';
-	return (pstr);
+	else
+		return (NULL);
 }
