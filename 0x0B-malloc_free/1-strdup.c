@@ -9,23 +9,22 @@
  *
  * Return: duplicate string
  */
-
 char *_strdup(char *str)
 {
-	int size = 0;
+	int size;
 	char *pstr;
-
-	while (str[size] != '\0')
-		size++;
-
-	pstr = malloc(size * sizeof(char) + 1);
 
 	if (str == NULL)
 		return (NULL);
+
+	for (size = 0; str[size] != '\0'; size++)
+		;
+
+	pstr = malloc(size * sizeof(*str) + 1);
+
 	if (pstr == 0)
 		return (NULL);
 
 	strcpy(pstr, str);
-
 	return (pstr);
 }
