@@ -18,13 +18,20 @@ int **alloc_grid(int col, int row)
 
 	array = (int **)malloc(row * sizeof(int *));
 	if (row <= 0 || col <= 0 || array == 0)
+	{
+		free(array);
 		return (NULL);
+	}
 
 	for (i = 0; i < row; i++)
 	{
 		array[i] = (int *)malloc(col * sizeof(int));
 		if (array[i] == NULL)
+		{
+			free(array[i]);
 			return (NULL);
+		}
+
 	}
 	for (i = 0; i < row; i++)
 	{
