@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - Returns a new string which is a duplicate of str
@@ -11,24 +12,20 @@
 
 char *_strdup(char *str)
 {
-	int k = 0;
-	int j;
-	int i = 0;
-	char *pstr = NULL;
+	int size = 0;
+	char *pstr;
 
-	while (str[i] != '\0')
-	{
-		i++;
-		k++;
-	}
+	while (str[size] != '\0')
+		size++;
 
-	pstr = malloc(sizeof(char) * (i + 1));
+	pstr = malloc(sizeof(char) * (size + 1));
 
 	if (str == NULL)
 		return (NULL);
+	if (pstr == NULL)
+		return (NULL);
 
-	for (j = 0; j <= i; j++)
-		pstr[j] = str[j];
+	strcpy(pstr, str);
 
 	return (pstr);
 }
