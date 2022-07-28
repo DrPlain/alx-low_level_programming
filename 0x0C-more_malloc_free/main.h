@@ -64,5 +64,6 @@ int **alloc_grid(int col, int row);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 void *malloc_checked(unsigned int b);
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 
 #endif
