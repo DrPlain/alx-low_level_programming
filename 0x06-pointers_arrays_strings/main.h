@@ -41,5 +41,6 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *leet(char *s);
 void print_number(int n);
+char *cap_string(char *s);
 
 #endif
