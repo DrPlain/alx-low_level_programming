@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include "variadic_functions.h"
 
 /**
  * print_strings - A function that prints strings passed to it
@@ -16,8 +17,8 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list ap;
 	unsigned int i;
+	va_list ap;
 	char *string;
 
 	va_start(ap, n);
@@ -26,7 +27,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		string = va_arg(ap, char *);
 
 		if (string == NULL)
-			printf("(nil");
+			printf("(nil)");
 		else
 			printf("%s", string);
 
