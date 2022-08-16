@@ -1,27 +1,20 @@
 #include "lists.h"
-#include <string.h>
-#include <stdlib.h>
 
 /**
- * add_node_end - A function that adds a node to the end of linked list
+ * add_nodeint_end - A function that adds a node to the end of linked list
  * @head: pointer to a list_t pointer that points to the head struct
- * @str: pointer to string that adds as node
+ * @n: Value to be stored in the node
  * Return: pointer to new element of list, NULL on failure
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *ptr, *temp;
-	int len_str = 0;
+	listint_t *ptr, *temp;
 
-	while (str[len_str] != '\0')
-		len_str++;
-
-	temp = malloc(sizeof(list_t));
+	temp = malloc(sizeof(listint_t));
 	if (temp == NULL)
 		return (NULL);
-	temp->len = len_str;
-	temp->str = strdup(str);
+	temp->n = n;
 
 	if (*head == NULL)
 	{
